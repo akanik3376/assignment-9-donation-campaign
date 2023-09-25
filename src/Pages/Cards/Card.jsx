@@ -1,5 +1,8 @@
 /* eslint-disable react/prop-types */
 
+import ViewDetailsCard from "../../Components/ViewDetails/ViewDetailsCard";
+
+
 
 const Card = ({ card }) => {
 
@@ -20,38 +23,40 @@ const Card = ({ card }) => {
         backgroundColor: btn_bg_color
     }
 
+    // const HandelAddToDonation = () => {
+    //     <ViewDetailsCard></ViewDetailsCard>
+    //     const AddedDonationArray = [];
+
+    //     const GetDonation = JSON.parse(localStorage.getItem('Donation'))
+
+    //     if (!GetDonation) {
+    //         AddedDonationArray.push(card)
+    //         localStorage.setItem('Donation', JSON.stringify(AddedDonationArray))
+
+    //         alert('add to donation')
+
+
+    //     }
+    //     else {
+
+    //         const isExist = GetDonation.find(donation => donation.id == id)
+
+    //         if (isExist) {
+    //             alert('all ready donated')
+    //         }
+    //         else {
+    //             AddedDonationArray.push(...GetDonation, card)
+    //             localStorage.setItem('Donation', JSON.stringify(AddedDonationArray))
+    //         }
+
+
+    //     }
+
+    // }
+
     const HandelAddToDonation = () => {
-
-        const AddedDonationArray = [];
-
-        const GetDonation = JSON.parse(localStorage.getItem('Donation'))
-
-        if (!GetDonation) {
-            AddedDonationArray.push(card)
-            localStorage.setItem('Donation', JSON.stringify(AddedDonationArray))
-
-            alert('add to donation')
-
-
-        }
-        else {
-
-            const isExist = GetDonation.find(donation => donation.id == id)
-
-            if (isExist) {
-                alert('all ready donated')
-            }
-            else {
-                AddedDonationArray.push(...GetDonation, card)
-                localStorage.setItem('Donation', JSON.stringify(AddedDonationArray))
-            }
-
-
-        }
-
+        <ViewDetailsCard></ViewDetailsCard>
     }
-
-
 
 
 

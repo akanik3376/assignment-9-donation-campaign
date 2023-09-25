@@ -15,6 +15,7 @@ const Home = () => {
             </div>
             <div className="mt-10">
                 <Cards key={cards.id} cards={cards}></Cards>
+
             </div>
         </div>
     );
