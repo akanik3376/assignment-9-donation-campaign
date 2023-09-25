@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 
 const DonationCard = ({ card }) => {
-    console.log(card)
+    // console.log(card)
     const { id, picture, category, title, bg_color, text_color, btn_bg_color, price, } = card || {}
+
+
+
 
     const cardBg = {
         backgroundColor: bg_color
@@ -34,7 +37,7 @@ const DonationCard = ({ card }) => {
                     <h2 style={textColor} className="font-semibold text-xl my-2 ">{title}</h2>
                     <p style={textColor} className="mb-4">{price} </p>
 
-                    <Link style={DetailsBtn} className="p-2  rounded text-white font-medium">
+                    <Link to={`/ViewDetails/${id}`} style={DetailsBtn} className="p-2  rounded text-white font-medium">
                         <button>View Details</button>
                     </Link>
 
