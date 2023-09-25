@@ -2,10 +2,7 @@
 const Banner = () => {
     return (
         <div>
-
-
-
-            <div className="hero min-h-[50vh] ">
+            <div className="hero min-h-[50vh] border">
 
 
                 <div className="flex justify-center items-center  mt-10">
@@ -21,6 +18,7 @@ const Banner = () => {
 
 
         </div>
+
     );
 };
 
