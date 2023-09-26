@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+import swal from "sweetalert";
 const DetailsCard = ({ cardDetails }) => {
     // console.log(cardDetails)
     const { id, picture, title, description, price } = cardDetails || {}
@@ -16,7 +17,8 @@ const DetailsCard = ({ cardDetails }) => {
             donationItemArray.push(cardDetails)
             localStorage.setItem('donation', JSON.stringify(donationItemArray))
 
-            alert('added')
+            // alert('added')
+            swal("Good job!", "Thank you for your donation", "success");
         }
         else {
 
@@ -26,10 +28,10 @@ const DetailsCard = ({ cardDetails }) => {
             if (!isExist) {
                 donationItemArray.push(...selectedItem, cardDetails)
                 localStorage.setItem('donation', JSON.stringify(donationItemArray))
-                alert('added')
+                swal("Good job!", "All ready donated", "success");
             }
             else {
-                alert('already ache')
+                swal("Good job!", "All ready donated", "error");
             }
 
 

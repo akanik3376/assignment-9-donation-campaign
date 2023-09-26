@@ -16,7 +16,7 @@ const DonationPage = () => {
             setDonation(selectedItem)
         }
         else {
-            setNoDonation('data nai')
+            setNoDonation('No  data available')
         }
     }, [])
 
@@ -32,7 +32,7 @@ const DonationPage = () => {
                 </div>
 
                     :
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                         {
                             isShowMore ? donation?.map(donationData => <SingleDonationPage key={donationData.id} data={donationData}></SingleDonationPage>)
 
