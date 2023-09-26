@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+
 const SingleDonationPage = ({ data }) => {
     const { picture, category, title, bg_color, text_color, btn_bg_color, price } = data || {}
 
@@ -35,6 +36,7 @@ const SingleDonationPage = ({ data }) => {
                     <button style={viewBtnBg} className="text-xl p-3 rounded-md mt-4 font-bold text-white">View Details</button>
                 </div>
             </div>
+
         </div >
     );
 };

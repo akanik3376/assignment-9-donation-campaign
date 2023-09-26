@@ -1,10 +1,20 @@
+/* eslint-disable no-undef */
+
+import { useState } from "react";
 
 const Banner = () => {
 
-    const HandelSearchBtn = () => {
-        console.log('gsg')
-    }
+    const [inputValue, setInputValue] = useState('');
 
+    const handleInputChange = (event) => {
+        setInputValue(event.target.value);
+    };
+
+
+    const handleSubmit = () => {
+
+        console.log('Input value:', inputValue);
+    };
 
 
 
@@ -16,10 +26,14 @@ const Banner = () => {
                     I Grow By Helping People In Need
                 </h1>
                 <div className="flex mt-5 md:ml-10 lg:ml-10">
-                    {/* <input className="py-3 px-5" type="text" name="" id="" placeholder="Search here...." /> */}
-                    <input type="text" placeholder="Search here...." className="input input-bordered input-error w-full max-w-xs px-5  rounded-md" />
 
-                    <button onClick={HandelSearchBtn} className="px-4 py-2 text-white rounded-md font-bold bg-[#FF444A]">Search</button>
+                    <input type="text"
+                        value={inputValue}
+                        onChange={handleInputChange}
+                        placeholder="Search here...." className="input input-bordered input-error w-full max-w-xs px-5  rounded-md" />
+
+                    <button onClick={handleSubmit}
+                        className="px-4 py-2 text-white rounded-md font-bold bg-[#FF444A]">Search</button>
                 </div>
             </div>
         </div>
