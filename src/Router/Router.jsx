@@ -1,10 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom';
 import MainLayOut from '../Layout/MainLayOut';
-import Home from '../Pages/HomePage/Home';
-import Donation from '../Pages/DonationPage/Donation';
-import Statistics from '../Pages/Statistics/Statistics';
 import ErrorPage from '../Pages/ErrorPage/ErrorPage';
-import ViewDetailsCard from '../Components/ViewDetails/ViewDetailsCard';
+import DonationPage from '../Pages/DonationPage/DonationPage';
+import StatisticsPage from '../Pages/StatisticsPage/StatisticsPage';
+import HomePage from '../Pages/HomePage/HomePage';
+import ViewDetailsCard from '../Components/ViewDetailsCard/ViewDetailsCard';
 
 const route = createBrowserRouter([
     {
@@ -14,22 +14,23 @@ const route = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Home></Home>,
+                element: <HomePage></HomePage>,
                 loader: () => fetch("/public/data.json")
             },
             {
                 path: "/Donation",
-                element: <Donation></Donation>
+                element: <DonationPage></DonationPage>
             },
             {
                 path: "/Statistics",
-                element: <Statistics></Statistics>
+                element: <StatisticsPage></StatisticsPage>
             },
             {
-                path: "/ViewDetails/:id",
+                path: "/ViewDetailsCard/:id",
                 element: <ViewDetailsCard></ViewDetailsCard>,
                 loader: () => fetch("/public/data.json")
             },
+
         ]
     }
 ])
