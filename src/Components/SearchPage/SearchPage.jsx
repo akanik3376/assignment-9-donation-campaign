@@ -1,6 +1,5 @@
 import { useLoaderData, useLocation } from "react-router-dom";
 import SarchCard from "../SarchCard/SarchCard";
-import ErrorPage from "../../Pages/ErrorPage/ErrorPage";
 
 const SearchPage = () => {
 

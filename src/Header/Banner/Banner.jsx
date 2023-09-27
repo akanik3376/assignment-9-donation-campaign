@@ -42,6 +42,7 @@ const Banner = ({ inputValue, handleInputChange }) => {
                     </div>
                 </div>
             </div>
+
         </div>
 
     );

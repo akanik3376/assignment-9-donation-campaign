@@ -45,7 +45,8 @@ const DonationPage = () => {
             <div className="mt-10 flex justify-center">
                 {
                     donation.length > 4 &&
-                    <button onClick={() => setShowMore(!isShowMore)} className="text-xl rounded-md  bg-[#009444] text-white font-bold py-2 px-5"> {isShowMore ? 'See Less' : "See All"}</button>
+                    <button onClick={() => setShowMore(!isShowMore)} className="text-xl rounded-md  bg-[#009444] text-white font-bold py-2 px-5">
+                        {isShowMore ? 'See Less' : "See All"}</button>
 
                 }
             </div>

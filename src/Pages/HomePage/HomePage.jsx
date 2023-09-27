@@ -16,7 +16,9 @@ const HomePage = () => {
 
             <div>
                 <Banner inputValue={inputValue} handleInputChange={handleInputChange}></Banner>
+
             </div>
+
             <div className="mt-10">
                 <Cards></Cards>
             </div>

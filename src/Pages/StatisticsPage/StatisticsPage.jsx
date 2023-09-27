@@ -60,8 +60,8 @@ const Statistics = () => {
     }, []);
 
     return (
-        <div className="flex justify-center items-center con mx-auto">
-            <PieChart width={400} height={400}>
+        <div className="flex container justify-center items-center con mx-auto">
+            <PieChart width={300} height={400}>
                 <Pie
                     data={chartData}
                     cx="50%"
